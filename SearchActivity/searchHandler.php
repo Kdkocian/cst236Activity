@@ -1,16 +1,18 @@
 <?php 
-include 'database.php';
+require_once 'database.php';
 $db = new myfuncs();
-$searchresult = $_POST['SearchBar'];
-$user = $db->searchUsersBysearchbar($searchresult);
+$conn = $db->dbConnect();
+
+$searchresult = mysqli_real_escape_string($conn, $_GET['SearchBar']);
+
+$sql = "Select * from users where Last_Name LIKE '%$searchresult%'";
+
+$result = mysqli_query($conn, $sql);
+
+while($row = mysqli_fetch_array($result))
+{
+    echo "$row[ID], $row[First_Name], $row[Last_Name]"."<br>";    
+}
+echo "<a href='search.html'>Searchpage</a>";
+
 ?>
-<html>
-<head>
-<title>Search Results</title>
-</head>
-<body>
-<?php 
-include 'displayusers.php';
-?>
-</body>
-</html>
