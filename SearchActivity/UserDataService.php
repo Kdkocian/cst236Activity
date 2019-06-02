@@ -1,5 +1,6 @@
 <?php
 require_once 'autoLoader.php';
+require_once 'database.php';
 class UserDataService
 {
     
@@ -32,7 +33,7 @@ class UserDataService
            if (count($users) > 0)
                return $users;
            return NULL;
-        }   else { echo "couldn't make connection";}
+        } 
     }
 }
 ?>
