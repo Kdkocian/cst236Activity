@@ -3,7 +3,7 @@ require_once 'database.php';
 $db = new myfuncs();
 $conn = $db->dbConnect();
 
-$searchresult = mysqli_real_escape_string($conn, $_GET['SearchBar']);
+$searchresult = mysqli_real_escape_string($conn, $_POST['SearchBar']);
 
 $sql = "Select * from users where Last_Name LIKE '%$searchresult%'";
 
