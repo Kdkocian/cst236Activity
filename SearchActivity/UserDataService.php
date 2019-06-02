@@ -32,7 +32,7 @@ class UserDataService
            if (count($users) > 0)
                return $users;
            return NULL;
-        }
+        }   else { echo "couldn't make connection";}
     }
 }
 ?>
