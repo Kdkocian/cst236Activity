@@ -14,20 +14,5 @@ class myfuncs{
         }
         return $conn;
     }
-    
-    function searchUsersBysearchbar()
-    {
-        $db = new myfuncs();
-        $conn = $db->dbConnect();
-        $sql = "SELECT * FROM ica8 WHERE Last_Name LIKE '%a%'";
-        $users = array();
-        $result = mysqli_query($conn, $sql);
-        
-        while ($row = mysqli_fetch_array($result)){
-            $users[] = array($row['ID'], $row['First_Name'], $row['Last_Name']);
-        }
-        mysqli_close($conn);
-        return $users;
-    }
 }
 ?>
