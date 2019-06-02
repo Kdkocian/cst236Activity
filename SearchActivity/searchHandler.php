@@ -8,4 +8,6 @@ $service = new UserBusinessService();
 $users = $service->searchByFirstName($paTTern);
 
 $display = new _displayAllUsers($users);
+
+echo $display->print($users);
 ?>
