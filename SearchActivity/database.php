@@ -1,6 +1,7 @@
 <?php
-class myfuncs{
-    function dbConnect() 
+class myfuncs
+{
+    function getConnect()
     {
         $servername = 'us-cdbr-iron-east-02.cleardb.net';
         $username = 'bad2754a68df73';

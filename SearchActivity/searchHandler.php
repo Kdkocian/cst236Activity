@@ -1,27 +1,11 @@
-<?php 
-require_once 'database.php';
-$db = new myfuncs();
-$conn = $db->dbConnect();
+<?php
+require_once 'autoLoader.php';
 
-$searchresult = mysqli_real_escape_string($conn, $_GET['SearchBar']);
+$paTTern = $_POST["First_Name"];
 
-$sql = "Select * from ica8 where Last_Name LIKE '%$searchresult%'";
+$service = new UserBusinessService();
 
-$result = mysqli_query($conn, $sql);
+$users = $service->searchByFirstName($paTTern);
 
-while($row = mysqli_fetch_array($result))
-{
-    echo $row['ID'], $row['First_Name'], $row['Last_Name']."<br>";    
-}
-echo "<a href='search.html'>Searchpage</a>";
-
+$display = new _displayAllUsers($users);
 ?>
-<html>
-<head>
-</head>
-<body>
-<?php 
-include 'displayusers.php';
-?>
-</body>
-</html>
