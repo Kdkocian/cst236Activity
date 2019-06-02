@@ -5,7 +5,7 @@ $conn = $db->dbConnect();
 
 $searchresult = mysqli_real_escape_string($conn, $_GET['SearchBar']);
 
-$sql = "Select * from users where Last_Name LIKE '%$searchresult%'";
+$sql = "Select * from users where Last_Name LIKE '%a%'";
 
 $result = mysqli_query($conn, $sql);
 
