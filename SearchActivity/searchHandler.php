@@ -16,3 +16,12 @@ while($row = mysqli_fetch_array($result))
 echo "<a href='search.html'>Searchpage</a>";
 
 ?>
+<html>
+<head>
+</head>
+<body>
+<?php 
+include 'displayusers.php';
+?>
+</body>
+</html>
