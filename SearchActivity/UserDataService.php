@@ -16,7 +16,7 @@ class UserDataService
         
         $sql = "SELECT * FROM users WHERE First_Name LIKE '%$pattern$'";
         
-        if($result = $db->sql($sql))
+        if($result = mysqli_query($db, $sql))
         {
            $index = 0;
            $users = array();
