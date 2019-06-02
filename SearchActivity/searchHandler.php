@@ -3,9 +3,9 @@ require_once 'database.php';
 $db = new myfuncs();
 $conn = $db->dbConnect();
 
-$searchresult = mysqli_real_escape_string($conn, $_POST['SearchBar']);
+$searchresult = mysqli_real_escape_string($conn, $_GET['SearchBar']);
 
-$sql = "Select * from users where Last_Name LIKE '%$searchresult%'";
+$sql = "Select * from ica8 where Last_Name LIKE '%$searchresult%'";
 
 $result = mysqli_query($conn, $sql);
 
