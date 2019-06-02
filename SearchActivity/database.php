@@ -19,7 +19,7 @@ class myfuncs{
     {
         $db = new myfuncs();
         $conn = $db->dbConnect();
-        $sql = "SELECT * FROM users WHERE Last_Name LIKE '%a%'";
+        $sql = "SELECT * FROM ica8 WHERE Last_Name LIKE '%a%'";
         $users = array();
         $result = mysqli_query($conn, $sql);
         
