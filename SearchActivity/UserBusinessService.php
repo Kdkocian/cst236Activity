@@ -10,7 +10,7 @@ class UserBusinessService
    public function searchByFirstName($pattern)
     {
         $service = new UserDataService();
-        return $service->searchByFirstName($pattern);     
+        return $service->findByFirstName($pattern);  
     }
 }
 
