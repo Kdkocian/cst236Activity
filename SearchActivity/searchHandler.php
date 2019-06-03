@@ -1,5 +1,5 @@
 <?php
-require_once 'autoLoader.php';
+//require_once 'autoLoader.php';
 require_once 'database.php';
 $db = new myfuncs();
 $conn = $db->getConnect();
