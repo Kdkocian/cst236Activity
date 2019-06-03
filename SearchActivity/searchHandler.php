@@ -1,7 +1,7 @@
 <?php
 require_once 'autoLoader.php';
 
-$paTTern = $_POST["search"];
+$paTTern = $_GET["search"];
 
 $service = new UserBusinessService();
 
