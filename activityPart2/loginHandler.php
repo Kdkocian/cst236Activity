@@ -1,4 +1,5 @@
 <?php
+
 use activityPart2\security;
 
 require_once 'autoLoader.php';
