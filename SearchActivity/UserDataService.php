@@ -15,7 +15,7 @@ class UserDataService
         
         $conn = $database->getConnect();
         
-        $sql = "SELECT * FROM users WHERE First_Name LIKE '%$pattern$'";
+        $sql = "SELECT * FROM users WHERE First_Name LIKE '%$pattern%'";
         
         if($result = mysqli_query($conn, $sql))
         {

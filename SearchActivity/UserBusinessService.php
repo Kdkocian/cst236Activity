@@ -4,7 +4,7 @@ class UserBusinessService
 {
     public function __construct()
     {
-        
+   
     }
     
    public function searchByFirstName($pattern)
