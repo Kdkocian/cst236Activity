@@ -10,7 +10,7 @@ $service = new UserBusinessService();
 
 $users = $service->searchByFirstName($paTTern);
 
-$display = new _displayAllUsers($users);
+$display = _displayAllUsers($users);
 
 echo $display->print($users);
 ?>
