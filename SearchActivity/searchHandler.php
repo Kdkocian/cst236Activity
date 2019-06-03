@@ -1,5 +1,5 @@
 <?php
-//require_once 'autoLoader.php';
+require_once 'autoLoader.php';
 require_once 'database.php';
 $db = new myfuncs();
 $conn = $db->getConnect();
@@ -10,7 +10,7 @@ $service = new UserBusinessService();
 
 $users = $service->searchByFirstName($paTTern);
 
-$display = _displayAllUsers($users);
+$display = new _displayAllUsers($users);
 
 echo $display->print($users);
 ?>

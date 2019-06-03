@@ -1,5 +1,5 @@
 <?php
-
+require_once 'autoLoader.php';
 class UserBusinessService
 {
     public function __construct()
