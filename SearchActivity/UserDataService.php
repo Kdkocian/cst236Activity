@@ -22,6 +22,9 @@ class UserDataService
            $index = 0;
            $users = array();
            
+           if (mysqli_num_rows($result) > 0) {
+               $row=mysqli_fetch_array($result);
+           }
            while ($row = $result->fetch_assoc())
            {
                $users[$index] = array($row["ID"], $row["First_Name"], $row["Last_Name"]);
