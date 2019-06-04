@@ -17,26 +17,12 @@ class UserDataService
         
         $sql = "SELECT * FROM users WHERE First_Name LIKE '%$pattern%'";
         
-        if($result = mysqli_query($conn, $sql))
+        $result = mysqli_query($conn, $sql);
+        
+        while($row = mysqli_fetch_array($result))
         {
-           $index = 0;
-           $users = array();
-           
-          
-           while ($row = $result->fetch_assoc())
-           {
-               $users[$index] = array($row["ID"], $row["First_Name"], $row["Last_Name"]);
-               $index++;
-           }
-           $result->free();
-           $conn->close();
-           
-           if (count($users) > 0)
-           {
-               return $users;
-           }
-           return NULL;
-        } 
+            echo $row['productID']," ", $row['productName'], " ", $row['productDescript'] ."<br>";
+        }
     }
 }
 ?>
