@@ -21,7 +21,7 @@ class UserDataService
         
         while($row = mysqli_fetch_array($result))
         {
-            echo $row['productID']," ", $row['productName'], " ", $row['productDescript'] ."<br>";
+            echo $row['ID']," ", $row['First_Name'], " ", $row['Last_Name'] ."<br>";
         }
     }
 }
