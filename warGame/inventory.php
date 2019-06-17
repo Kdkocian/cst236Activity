@@ -1,6 +1,7 @@
 <?php
 require_once 'database.php';
-$db = new myfuncs();
+require_once 'functions.php';
+$db = new funcs();
 ?>
 
 <html>
@@ -15,7 +16,7 @@ $db = new myfuncs();
     	<th>Price</th>
 	</tr>
     <?php
-    $weapon = $db->getAllusers();
+    $weapon = $db->getAllproducts();
     for($id = 0;$id < count($weapon);$id++){
         echo "<form action = 'inventorymanagement.php' method = 'POST'>";
         echo "<tr>";
