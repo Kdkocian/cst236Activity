@@ -4,7 +4,6 @@ require_once 'functions.php';
 session_start();
 $db = new myfuncs();
 $conn = $db->dbConnect();
-$funcs = new funcs();
 
     $uName = mysqli_real_escape_string($conn, $_POST['uName']);
     $pWord = mysqli_real_escape_string($conn, $_POST['pWord']);
@@ -24,8 +23,7 @@ $funcs = new funcs();
     
     if ($row['passWord'] == $pWord )
         {
-            $funcs->setUseradmin($row['admin']);
-            mysqli_close($conn);
+           // mysqli_close($conn);
             header("Location: inventory.php");
         }
     else
