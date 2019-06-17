@@ -25,11 +25,11 @@ if ($pWord == "")
     echo "Please submit a password";
 }
 
-$sql = "INSERT INTO users(firstName, lastName, userName, passWord) VALUES('$fName', '$lName', '$uName', '$pWord')";
+$sql = "INSERT INTO users(First_Name, Last_Name, userName, passWord) VALUES('$fName', '$lName', '$uName', '$pWord')";
 
 mysqli_query($conn, $sql);
 
 mysqli_close($conn);
 
-header("Location: ../views/login.html");
+header("Location: login.html");
 ?>
