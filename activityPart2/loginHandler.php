@@ -1,9 +1,8 @@
 <?php
-
-use activityPart2\security;
-
 require_once 'autoLoader.php';
 include_once 'sessionStart.php';
+
+echo "Login was Successful. Welcome "  ."Admin" . ".";
 
 if (!isset($_POST['userName']) || $_POST['userName'] == "")
 {
@@ -24,7 +23,7 @@ if ($security->authentication())
     $_SESSION['principle'] = true;
     include 'loginSuccess.php';
 }
-else 
+else
 {
     $_SESSION['principle'] = false;
     include 'loginFailed.php';
