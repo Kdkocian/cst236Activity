@@ -20,7 +20,7 @@ function getAllIncart()
     $db = new myfuncs();
     $conn = $db->dbConnect();
     
-    $sql = "SELECT weaponIDs, weaponNamE, weaponPrice FROM cart";
+    $sql = "SELECT weaponIDs, weaponNamE, weaponPricE FROM cart";
     $weapon = array();
     $result = mysqli_query($conn, $sql);
     
