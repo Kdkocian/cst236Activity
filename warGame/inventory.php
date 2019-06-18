@@ -23,7 +23,7 @@ $db = new funcs();
             echo "<td>".$weapon[$id][0]."</td>";
             echo "<td>".$weapon[$id][1]."</td>";
             echo "<td>".$weapon[$id][2]."</td>";
-            echo '<td><input type = "hidden" name = "ID" value = "'.$$weapon[$id][0].'">';
+            echo '<td><input type = "hidden" name = "ID" value = "'.$weapon[$id][0].'">';
             echo '<input type="submit" name = "addCart" value="Add To Cart" /></td>';
         echo "</form>";
     }
