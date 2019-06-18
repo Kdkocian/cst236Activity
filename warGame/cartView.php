@@ -32,7 +32,7 @@ $conn = $db->dbConnect();
 	$row = mysqli_fetch_assoc($price);
 	$sum = $row["totalsum"];
 	
-    echo "Your Total Price is: $'$sum'";
+    echo "Your Total Price is: $'$sum'" ."</br>";
 	
 	mysqli_close($conn);
 	echo "<form action = 'checkout.php' method = 'POST'>";
