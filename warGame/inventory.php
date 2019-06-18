@@ -28,7 +28,7 @@ $db = new funcs();
         echo "</form>";
     }
     echo "<a href='login.php'>Log Out</a>" ."</br>";
-    echo "<a href='viewCart.php'>Checkout/ViewCart</a>" ."</br>";
+    echo "<a href='cartView.php'>Checkout/ViewCart</a>" ."</br>";
     ?>
     </table>
     </body>
