@@ -10,7 +10,7 @@ function getAllproducts()
     
     while($row = mysqli_fetch_array($result))
     {
-        $products[] = array($row['weaponIDs'], $row['weaponName'], $row['weaponPrice']);
+        $products[] = array($row['weaponID'], $row['weaponName'], $row['weaponPrice']);
     }
     mysqli_close($conn);
     return $products;
@@ -26,7 +26,7 @@ function getAllIncart()
     
     while($row = mysqli_fetch_array($result))
     {
-        $weapon[] = array($row['weaponIDs'], $row['waeponNAme'], $row['weaponPrice']);
+        $weapon[] = array($row['weaponIDs'], $row['weaponNAme'], $row['weaponPrice']);
     }
     mysqli_close($conn);
     return $weapon;
