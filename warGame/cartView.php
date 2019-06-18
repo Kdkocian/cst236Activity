@@ -28,7 +28,7 @@ $conn = $db->dbConnect();
            echo "</form></tr>";
 	}
 	
-	$price = "SELECT SUM(weaponPricE) AS totalsum FROM cart" ."</br>";
+	$price = "SELECT SUM(weaponPricE) FROM cart" ."</br>";
 	$row = mysqli_fetch_assoc($price);
 	$sum = $row["totalsum"];
 	
