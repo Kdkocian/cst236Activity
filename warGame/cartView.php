@@ -30,7 +30,7 @@ $conn = $db->dbConnect();
 	
 	$price = "SELECT SUM(weaponPricE) FROM cart" ."</br>";
 	$row = mysqli_fetch_assoc($price);
-	$sum = $row["totalsum"];
+	$sum = $row["SUM(weaponPricE"];
 	
     echo "Your Total Price is: $'$sum'" ."</br>";
 	
