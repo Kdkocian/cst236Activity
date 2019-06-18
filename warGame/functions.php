@@ -26,7 +26,7 @@ function getAllIncart()
     
     while($row = mysqli_fetch_array($result))
     {
-        $weapon[] = array($row['weaponIDs'], $row['weaponNAme'], $row['weaponPrice']);
+        $weapon[] = array($row['weaponIDs'], $row['weaponNamE'], $row['weaponPricE']);
     }
     mysqli_close($conn);
     return $weapon;
