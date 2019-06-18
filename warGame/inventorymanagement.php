@@ -5,9 +5,9 @@ $conn = $db->dbConnect();
 
 if(isset($_POST['addCart']))
 {
-    $weaponName = mysqli_real_escape_string($conn, $_POST['weaponName']);
+    $weaponName = mysqli_real_escape_string($conn, $_POST['name']);
     $weaponID = mysqli_real_escape_string($conn, $_POST['ID']);
-    $weaponPrice = mysqli_real_escape_string($conn, $_POST['weaponPrice']);
+    $weaponPrice = mysqli_real_escape_string($conn, $_POST['price']);
     $sql = "INSERT INTO cart(weaponIDs, weaponNamE, weaponPricE) VALUES('$weaponID', '$weaponName', '$weaponPrice')";
     
     mysqli_query($conn, $sql);
